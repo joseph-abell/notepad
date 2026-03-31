@@ -45,7 +45,6 @@
     .field {
       min-height: 18mm;
       border: 1px solid #222;
-      border-radius: 3mm;
       padding: 3mm 4mm;
       box-sizing: border-box;
       display: flex;
@@ -62,12 +61,46 @@
     .notes {
       flex: 1;
       border: 1px solid #222;
-      border-radius: 3mm;
       padding: 6mm;
       box-sizing: border-box;
       background:
         linear-gradient(to bottom, transparent calc(100% - 1px), rgba(0,0,0,0.08) 1px);
       background-size: 100% 8mm;
+    }
+
+    .footer {
+      border-top: 1px solid #222;
+      padding-top: 4mm;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3mm;
+      align-items: start;
+    }
+
+    .med {
+      border: 1px solid #222;
+      border-radius: 3mm;
+      padding: 3mm;
+      box-sizing: border-box;
+      min-height: 16mm;
+    }
+
+    .med-name {
+      font-size: 10pt;
+      margin-bottom: 2mm;
+    }
+
+    .boxes {
+      display: flex;
+      gap: 2mm;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 5mm;
+      height: 5mm;
+      border: 1px solid #222;
+      box-sizing: border-box;
     }
 
     @media print {
@@ -92,6 +125,38 @@
     </section>
 
     <section class="notes" aria-label="Notes area"></section>
+
+    <footer class="footer" aria-label="Medicine tracker">
+      <div class="med">
+        <div class="med-name">Metformin</div>
+        <div class="boxes" aria-label="3 boxes for metformin">
+          <span class="box"></span><span class="box"></span><span class="box"></span>
+        </div>
+      </div>
+
+      <div class="med">
+        <div class="med-name">Sertraline</div>
+        <div class="boxes" aria-label="1 box for sertraline">
+          <span class="box"></span>
+        </div>
+      </div>
+
+      <div class="med">
+        <div class="med-name">Loperamide</div>
+        <div class="boxes" aria-label="6 boxes for loperamide">
+          <span class="box"></span><span class="box"></span><span class="box"></span>
+          <span class="box"></span><span class="box"></span><span class="box"></span>
+        </div>
+      </div>
+
+      <div class="med">
+        <div class="med-name">Buscopan</div>
+        <div class="boxes" aria-label="6 boxes for buscopan">
+          <span class="box"></span><span class="box"></span><span class="box"></span>
+          <span class="box"></span><span class="box"></span><span class="box"></span>
+        </div>
+      </div>
+    </footer>
   </main>
 </body>
 </html>
