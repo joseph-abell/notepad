@@ -30,20 +30,21 @@
       width: 100%;
       height: 100%;
       box-sizing: border-box;
-      padding: 10mm;
+      padding: 8mm;
       display: flex;
       flex-direction: column;
-      gap: 8mm;
+      gap: 5mm;
     }
 
     .header {
       display: grid;
       grid-template-columns: 1.2fr 1.2fr 1fr;
-      gap: 4mm;
+      gap: 3mm;
+      border: none;
     }
 
     .field {
-      min-height: 18mm;
+      min-height: 14mm;
       border: 1px solid #222;
       padding: 3mm 4mm;
       box-sizing: border-box;
@@ -55,50 +56,50 @@
     .line {
       width: 100%;
       border-bottom: 1px solid #777;
-      min-height: 6mm;
+      min-height: 5mm;
     }
 
     .notes {
-      flex: 1;
+      flex: 0 0 94mm;
       border: 1px solid #222;
-      padding: 6mm;
+      padding: 5mm;
       box-sizing: border-box;
       background:
         linear-gradient(to bottom, transparent calc(100% - 1px), rgba(0,0,0,0.08) 1px);
-      background-size: 100% 8mm;
+      background-size: 100% 7mm;
+      overflow: hidden;
     }
 
     .footer {
       border-top: 1px solid #222;
-      padding-top: 4mm;
+      padding-top: 3mm;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 3mm;
+      gap: 2.5mm;
       align-items: start;
     }
 
     .med {
       border: 1px solid #222;
-      border-radius: 3mm;
-      padding: 3mm;
+      padding: 2.5mm;
       box-sizing: border-box;
-      min-height: 16mm;
+      min-height: 15mm;
     }
 
     .med-name {
-      font-size: 10pt;
-      margin-bottom: 2mm;
+      font-size: 9pt;
+      margin-bottom: 1.5mm;
     }
 
     .boxes {
       display: flex;
-      gap: 2mm;
+      gap: 1.5mm;
       flex-wrap: wrap;
     }
 
     .box {
-      width: 5mm;
-      height: 5mm;
+      width: 4.5mm;
+      height: 4.5mm;
       border: 1px solid #222;
       box-sizing: border-box;
     }
@@ -113,15 +114,9 @@
 <body>
   <main class="page">
     <section class="header" aria-label="Header fields">
-      <div class="field">
-        <div class="line" aria-label="Date"></div>
-      </div>
-      <div class="field">
-        <div class="line" aria-label="Location"></div>
-      </div>
-      <div class="field">
-        <div class="line" aria-label="Mood"></div>
-      </div>
+      <div class="field"><div class="line" aria-label="Date"></div></div>
+      <div class="field"><div class="line" aria-label="Location"></div></div>
+      <div class="field"><div class="line" aria-label="Mood"></div></div>
     </section>
 
     <section class="notes" aria-label="Notes area"></section>
